@@ -1,6 +1,13 @@
-const express = require('express');
+const express = require('express'); // if put a dot infront it will look in current folder
+// by default will look for express in node_modules
+
+// app.listen(5000) // start here to see if the server is working
 
 const app = express();
+
+// arrow funciton verses regular function
+//let listener = () => {console.log('hello')};
+// funtion listener() {};
 
 const port = 5000; 
 
@@ -16,5 +23,5 @@ let quotes_data = [
 
 app.get('/quotes', (req, res) => {
     res.send(quotes_data);
-})
+});
 
